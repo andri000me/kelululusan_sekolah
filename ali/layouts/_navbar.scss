@@ -1,0 +1,93 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  .navbar {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__logo {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 10px 0px;
+
+        span {
+          color: $secondaryText;
+        }
+      }
+
+      #bars {
+        font-size: 30px;
+        color: $secondaryText;
+        cursor: pointer;
+        text-align: center;
+        @include tablet {
+          display: none;
+          text-align: center;
+        }
+      }
+    }
+
+    &__list {
+      display: none;
+      text-align: center;
+      @include tablet {
+        color: #fff;
+        margin-top: 10px;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+}
+
+.list__component {
+  color: #fff;
+  margin-top: 100px;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+
+  @include tablet {
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    padding: 0px;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 40px 0;
+    text-align: center;
+
+    @include tablet {
+      color: #fff;
+      margin: 0px 40px 0px 0px;
+      text-align: center;
+    }
+
+    a {
+      color: $primaryText;
+      text-decoration: none;
+      transition: 0.4s ease;
+      text-align: center;
+
+      &:hover {
+        border-bottom: 3px solid $secondaryText;
+        text-align: center;
+      }
+    }
+  }
+}

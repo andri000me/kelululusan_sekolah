@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap");
+
+// abstract
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// reset
+@import "./base/reset";
+
+// layouts
+@import "./layouts/navbar";
+
+// components
+@import "./components/sidedrawer";
+@import "./components/jumbotron";
+@import "./components/about";
+@import "./components/showcase";
+
+
+body {
+  font-family: "Inter";
+  margin: 0;
+  background-image: url('BACKGROUND.png');
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 90%;
+  }
+  @include desktop {
+    width: 85%;
+  }
+}
